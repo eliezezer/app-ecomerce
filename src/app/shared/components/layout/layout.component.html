@@ -1,0 +1,73 @@
+<div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar -->
+      <div class="col-md-2 bg-dark text-white p-4 min-vh-100 d-flex flex-column">
+        <h4 class="text-center mb-4">Admin Panel</h4>
+        <ul class="nav flex-column flex-grow-1">
+          
+          <!-- Dashboard -->
+          <li class="nav-item mb-3">
+            <a class="nav-link text-white" routerLink="/admin/dashboard" routerLinkActive="active">
+              <i class="bi bi-house-door me-2"></i> Dashboard
+            </a>
+          </li>
+  
+          <!-- Products (Dropdown) -->
+          <li class="nav-item mb-3">
+            <a class="nav-link text-white d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#productsMenu" role="button" aria-expanded="false" aria-controls="productsMenu">
+              <span><i class="bi bi-box me-2"></i> Products</span>
+              <i class="bi bi-chevron-down"></i>
+            </a>
+            <div class="collapse" id="productsMenu">
+              <ul class="nav flex-column ps-4">
+                <li class="nav-item">
+                  <a class="nav-link text-white" routerLink="/admin/products">
+                    <i class="bi bi-list me-2"></i> View Products
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" routerLink="/admin/products/add">
+                    <i class="bi bi-plus-circle me-2"></i> Add Product
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+  
+          <!-- Users (Dropdown) -->
+          <li class="nav-item mb-3">
+            <a class="nav-link text-white d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#usersMenu" role="button" aria-expanded="false" aria-controls="usersMenu">
+              <span><i class="bi bi-people me-2"></i> Users</span>
+              <i class="bi bi-chevron-down"></i>
+            </a>
+            <div class="collapse" id="usersMenu">
+              <ul class="nav flex-column ps-4">
+                <li class="nav-item">
+                  <a class="nav-link text-white" routerLink="/admin/users">
+                    <i class="bi bi-person me-2"></i> View Users
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" routerLink="/admin/users/add">
+                    <i class="bi bi-person-plus me-2"></i> Add User
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+  
+        </ul>
+      </div>
+  
+      <!-- Main Content -->
+      <div class="col-md-9 d-flex flex-column min-vh-100">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm mb-4">
+          <a class="navbar-brand" href="#">Admin Dashboard</a>
+        </nav>
+        <div class="p-4 bg-light rounded flex-grow-1">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </div>
+  
